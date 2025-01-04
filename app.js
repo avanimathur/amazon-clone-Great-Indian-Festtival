@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const updateLocationButton = document.querySelector(".update-location");
 
     updateLocationButton.addEventListener('click', function(event) {
-        getLocation(); // Call the getLocation function on click
+        getLocation();
     });
 });
 
