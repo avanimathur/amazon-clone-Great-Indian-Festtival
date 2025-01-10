@@ -6,29 +6,39 @@ body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
-        .lower-header .lower-header-text {
-            text-decoration: none; /* Removes underline */
-            color: white; /* Matches text color of other spans */
-            cursor: pointer; /* Changes cursor to pointer for links */
+
+.lower-header .lower-header-text {
+  text-decoration: none;
+  /* Removes underline */
+  color: white;
+  /* Matches text color of other spans */
+  cursor: pointer;
+  /* Changes cursor to pointer for links */
 }
 
-        .lower-header .lower-header-text:hover {
-              text-decoration: underline; /* Optional: Add underline on hover for all */
+.lower-header .lower-header-text:hover {
+  text-decoration: underline;
+  /* Optional: Add underline on hover for all */
 }
-    
+
 #navbar {
   background-color: #131a22;
-  height: 70px;
+  /* height: 70px; */
+  height: 8.5vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 2px;
 }
 
 .amazon-logo {
   width: 110px;
-  height: 35px;
+  height: 30px;
+
   margin-left: 20px;
+
+  border-radius: 2px;
 }
 
 .amazon-logo:hover {
@@ -38,6 +48,7 @@ body {
 
 .location {
   color: white;
+
 }
 
 .location:hover {
@@ -46,29 +57,36 @@ body {
 }
 
 .location-name {
-  font-size: 0.85rem;
+  font-size: 11px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: #cbcbcb;
 }
 
 .update-location {
-  font-size: 0.9rem;
+  font-size: 12px;
   font-weight: bold;
+  font-family: "Amazon Ember", Arial, sans-serif;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
+  width: 49vw;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .select-type {
-  background-color: lightgrey;  
-  height: 2.6rem;  
-  width: 4rem;  
-  border-radius: 5px 0 0 5px; 
-  padding-left: 15px;  
-  padding-top: 3px; 
-  border: none;  
-  margin-right: 0px; 
-  margin-top: 0;  
+  background-color: lightgrey;
+  height: 5.4vh;
+  width: 3rem;
+  border-radius: 5px 0 0 5px;
+  padding-left: 15px;
+  padding-top: 3px;
+  border: none;
+  margin-right: 0px;
+  margin-top: 0;
+  font-size: 12px;
 }
 
 .select-type:hover {
@@ -77,12 +95,13 @@ body {
 }
 
 .input-search {
-  height: 2.5rem; 
-  width: 45vw; 
-  background-color: #ffffff; 
-  border-radius: 0; 
-  padding-left: 10px; 
-  border: none; 
+  height: 5.2vh;
+  width: 45vw;
+  background-color: #ffffff;
+  border-radius: 0;
+  padding-left: 10px;
+  border: none;
+  font-size: 14px;
 }
 
 .input-search:hover {
@@ -91,15 +110,15 @@ body {
 }
 
 .search-icon {
-  margin-left: 0;  
-  margin-top: 0.4px; 
-  background-color: rgb(236, 147, 31);  
-  padding: 0.65rem 1rem;  
-  border-radius: 0 5px 5px 0;  
-  cursor: pointer;  
-  height: 1.4rem; 
+  margin-left: 0;
+  margin-top: 0.4px;
+  background-color: #febd69;
+  padding: 0.65rem 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  height: 2.2vh;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
 
@@ -132,11 +151,11 @@ body {
 }
 
 .sign-head {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .sign-bottom {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -156,6 +175,7 @@ body {
   width: 35px;
 
   color: white;
+
   :hover {
     outline: 0.5px solid white;
     outline-offset: 10px;
@@ -166,16 +186,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2f3b4b;
+  background-color: #232f3e;
   color: white;
-  height: 40px;
+  line-height: 35px;
   width: 100%;
 }
 
 .lower-header-text {
   margin-left: 1rem;
   margin-right: 1rem;
-  font-size: 0.9rem;
+  font-size: 12px;
+  font-family: "Amazon Ember", Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -195,6 +216,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  border-radius: 5px;
   width: 100%;
   animation: slide 25s infinite;
   position: relative;
@@ -202,7 +224,7 @@ body {
 
 .slide {
   min-width: 100%;
-  height: 45vh;
+  height: 35vh;
 }
 
 .slide img {
@@ -215,27 +237,35 @@ body {
   0% {
     transform: translateX(0%);
   }
+
   20% {
     transform: translateX(0%);
   }
+
   25% {
     transform: translateX(-100%);
   }
+
   45% {
     transform: translateX(-100%);
   }
+
   50% {
     transform: translateX(-200%);
   }
+
   70% {
     transform: translateX(-200%);
   }
+
   75% {
     transform: translateX(-300%);
   }
+
   95% {
     transform: translateX(-300%);
   }
+
   100% {
     transform: translateX(-400%);
   }
@@ -251,7 +281,6 @@ body {
 
 .multi-img {
   width: 30wv;
-  border-radius: 10px;
   background-color: white;
   margin: 1rem;
 }
@@ -329,6 +358,7 @@ body {
   width: 100vw;
   margin-right: 40px;
 }
+
 .single-img-box {
   display: inline-block;
   background-color: white;
@@ -336,7 +366,6 @@ body {
   height: 50vh;
   margin: 1rem;
   text-align: center;
-  border-radius: 10px;
 }
 
 .single-img-head {
@@ -389,7 +418,7 @@ body {
 
 .footer {
   width: 100%;
-  background-color: #131A22;
+  background-color: #232f3e;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -415,12 +444,16 @@ body {
 .footer-column h3 {
   margin-bottom: 10px;
   color: white;
+  font-size: 14px;
+  font-family: "Amazon Ember", Arial, sans-serif;
 }
 
 .footer-column a {
   color: #ffffff;
   text-decoration: none;
   display: block;
+  letter-spacing: normal;
+  font-size: 12.5px;
   margin-bottom: 5px;
   transition: color 0.3s;
 }
@@ -433,7 +466,7 @@ body {
 .footer-bottom {
   text-align: center;
   padding: 10px 0;
-  background-color: #131A22;
+  background-color: #232f3e;
 }
 
 .footer-bottom img {
@@ -471,11 +504,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #232F3E;
+  background-color: #37475a;
   width: 100%;
-  height: 50px;
+  height: 43px;
+  line-height: 20px;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -494,7 +529,7 @@ body {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.8;
-  text-align: left; 
+  text-align: left;
 }
 
 .list-footer li {
@@ -503,46 +538,100 @@ body {
 
 /* Parent container styling */
 .sign-in {
-    position: relative;
-    display: inline-block;
-    color: white;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
 }
 
 #bottom {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Dropdown menu styling */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Position below the parent */
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-    z-index: 1000;
-    width: 200px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* Position below the parent */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1000;
+  width: 200px;
 }
 
 /* Dropdown items */
 .dropdown-item {
-    display: block;
-    padding: 10px 15px;
-    color: #000;
-    text-decoration: none;
-    font-size: 14px;
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .dropdown-item:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 /* Show dropdown on hover */
 .sign-in:hover .dropdown-menu {
-    display: block;
+  display: block;
+}
+/* ! */
+#amazon-footer {
+  background-color: #131a22;
+  color: #ffffff;
+  padding: 20px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.link-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link {
+  color: #c7c7c7;
+  text-decoration: none;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom-2 {
+  text-align: center;
+  border-top: 1px solid #131a22;
+  padding-top: 10px;
+}
+
+.footer-bottom-2 a {
+  color: #c7c7c7;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-bottom-2 a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom-2 p {
+  margin-top: 10px;
+  color: #c7c7c7;
 }
