@@ -15,8 +15,11 @@
 <body>
 
     <div id="navbar">
+        <!-- Make the amazon logo clickable which will bring the user to index.html -->
+        <a href="/index.html">
+            <img class="amazon-logo" src="./amazon assets/logo.webp">
+        </a>
 
-        <img class="amazon-logo" src="./amazon assets/logo.webp">
         <div class="location" onclick="getLocation()">
             <span class="location-name">Delivering to Chandpur 110099</span>
             <br>
@@ -51,30 +54,37 @@
             </span>
         </div>
 
-        <div class="language">
-            <select name="language" class="language-list">
-                <option value="english">EN</option>
-            </select>
-        </div>
-
+        <div class="dropdown">
+            <div class="dropdown-button">
+                <img src="https://flagcdn.com/w20/us.png" alt="English Flag"><p>EN</p>
+                <i class="fa-solid fa-caret-down" style="margin-left: auto; color:#fff; size:10px,16px" ></i>
+            </div>
+            <div class="dropdown-content">
+            <a href="#" data lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English Flag"> EN</a>
+            <a href="#" data lang="hin"><img src="https://flagcdn.com/w20/in.png" alt="India flag">HIN</a>
+            <a href="#" data lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spain flag">ES</a>
+            <a href="#" data lang="de"><img src="https://flagcdn.com/w20/de.png" alt="German flag">DE</a>
+            <a href="#" data lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French flag">FR</a>
+            <a href="#" data lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italian flag">IT</a>
+            </div>
+        </div>  
+       
         <div class="sign-in">
     <span class="sign-head">Hello, Sign In</span>
     <div id="bottom">
         <span class="sign-bottom">Account & Lists</span>
         <i class="fa-solid fa-caret-down" style="color: #fff;"></i>
     </div>
-    <!-- Dropdown Menu -->
     <div class="dropdown-menu">
-        <a href="/signin" class="dropdown-item">Sign In</a>
-        <a href="/signup" class="dropdown-item">New Customer? Sign Up</a>
+        <a href="Loginpage.html" class="dropdown-item">Sign In</a>
+        <a href="Signuppage.html" class="dropdown-item">New Customer? Sign Up</a>
     </div>
 </div>
-
 
         <div class="account">
             <span class="location-name">Returns</span>
             <br>
-            <span class="update-location">&Orders</span>
+            <span class="update-location">& Orders</span>
         </div>
 
         <div class="cart">
@@ -84,6 +94,7 @@
     </div>
 
     <div class="lower-header">
+<!--  fix-color-mismatch-and-add-carousels -->
         <span class="lower-header-text">All</span>
         <span class="lower-header-text">Mx Player</span>
         <span class="lower-header-text">Sell</span>
@@ -96,6 +107,24 @@
         <span class="lower-header-text">Home & Kitchen</span>
         <span class="lower-header-text">Amazon Pay</span>
         <span class="lower-header-text">New Releases</span>
+
+        <span class="lower-header-text">
+            <a href="/index.html">Home</a>
+        </span>
+        <span class="lower-header-text">Shop</span>
+        <span class="lower-header-text">Deals</span>
+        <span class="lower-header-text">New</span>
+        <span class="lower-header-text">Gift</span>
+        <span class="lower-header-text">Cart</span>
+        <span class="lower-header-text">Order</span>
+        <a href="help.html" class="lower-header-text">Help</a>
+        <span class="lower-header-text">Books</span>
+        <span class="lower-header-text">Music</span>
+        <span class="lower-header-text">Games</span>
+        <a href="prime.html">
+            <span class="lower-header-text">Prime</span>
+        </a>
+<!-- >>>>>>> main -->
         <span class="lower-header-text">Kids</span>
         <a href="contact.html" class="lower-header-text">Contact Us</a>
         <span class="lower-header-text">More</span>
@@ -185,19 +214,19 @@
         <div class="multi-img">
             <h1 class="multi-head">Headphones</h1>
             <div class="single-multi">
-                <img src="./amazon assets/brand1.png" alt="">
+                <img src="./amazon assets/zebronics_headphones.png" alt="">
                 <span>Zebronics</span>
             </div>
             <div class="single-multi">
-                <img src="./amazon assets/brand2.png" alt="">
+                <img src="./amazon assets/noise_headphones.png" alt="">
                 <span>Noise</span>
             </div>
             <div class="single-multi">
-                <img src="./amazon assets/brand3.png" alt="">
+                <img src="./amazon assets/boat_headphones.png" alt="">
                 <span>Boat</span>
             </div>
             <div class="single-multi">
-                <img src="./amazon assets/brand4.png" alt="">
+                <img src="./amazon assets/boult_headphones.png" alt="">
                 <span>Boult</span>
             </div>
         </div>
@@ -326,6 +355,34 @@
         </ul>
     </div>
 
+
+    <div class="electronics-section">
+        <h1 class="electronics-head">Best Deals on Electronics</h1>
+        <div class="electronics-items">
+            <div class="electronics-item">
+                <img src="./amazon assets/laptop.jpg" alt="Laptop" class="electronics-img">
+                <span>Laptops</span>
+            </div>
+            <div class="electronics-item">
+                <img src="./amazon assets/phone.jpg" alt="Phone" class="electronics-img">
+                <span>Smartphones</span>
+            </div>
+            <div class="electronics-item">
+                <img src="./amazon assets/headphones.png" alt="Headphones" class="electronics-img">
+                <span>Headphones</span>
+            </div>
+            <div class="electronics-item">
+                <img src="./amazon assets/smartwatch.jpg" alt="Smartwatch" class="electronics-img">
+                <span>Smartwatches</span>
+            </div>
+            <div class="electronics-item">
+                <img src="./amazon assets/powerbank.jpg" alt="Power Bank" class="electronics-img">
+                <span>Power Banks</span>
+            </div>
+        </div>
+    </div>
+    
+
     <div class="single-img-sec">
         <div class="single-img-box">
             <h1 class="single-img-head">Fitness</h1>
@@ -362,11 +419,17 @@
 
     <div class="footer">
         <div class="footer-column">
-            <h3>Get to Know Us</h3> <a href="#">About Us</a> <a href="#">Careers</a> <a href="#">Press Releases</a>
-            <a href="#">Amazon Science</a>
+            <h3>Get to Know Us</h3> 
+            <a href="#" >About Us</a> 
+            <a href="#" >Careers</a> 
+            <a href="#" >Press Releases</a>
+            <a href="#" >Amazon Science</a>
         </div>
         <div class="footer-column">
-            <h3>Connect with Us</h3> <a href="#">Facebook</a> <a href="#">Twitter</a> <a href="#">Instagram</a>
+            <h3>Connect with Us</h3> 
+            <a href="#">Facebook</a> 
+            <a href="#">Twitter</a> 
+            <a href="#">Instagram</a>
         </div>
         <div class="footer-column">
             <h3>Make Money with Us</h3> <a href="#">Sell on Amazon</a> <a href="#">Sell under Amazon Accelerator</a> <a
@@ -381,13 +444,16 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" width="100">
+        <a href="/index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" width="100">
+        </a>
         <br><br> <select>
             <option value="en">English</option>
-            <option value="en">हिन्दी</option>
-            <option value="en">Mararti</option>
+            <option value="hindi">हिन्दी</option>
+            <option value="marathi">Marathi</option>
         </select> <select>
             <option value="in">India</option>
+<!-- <<<<<<< fix-color-mismatch-and-add-carousels -->
             <option value="in">UK</option>
             <option value="in">Australia</option>
             <option value="in">Canada</option>
@@ -421,6 +487,13 @@
         </div>
       </footer>
             
+<!-- ======= -->
+            <option value="uk">UK</option>
+            <option value="usa">Australia</option>
+            <option value="canada">Canada</option>
+            
+        <script src="app.js"></script>
+<!-- >>>>>>> main -->
 </body>
 
 </html>

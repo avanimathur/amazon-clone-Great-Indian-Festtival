@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login Page</title>
+    <link rel="stylesheet" href="Loginpage.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Amazon_logo_svg.svg" alt="Amazon Logo" class="logo">
+        
+        <div class="login-box">
+            <h2>Sign in</h2>
+            <form id="loginForm" action="/LoginPage.js" method="POST" novalidate>
+                <label for="email">Email or mobile phone number</label>
+                <input type="text" id="email" name="email" required>
+                
+                <script src="LoginPage.js" defer></script>
+
+                <span id="error-message" class="error-message" style="color: red; display: none;">
+                    Please enter a valid email or phone number.
+                </span>
+
+                <button type="submit" class="continue-btn">Continue</button>
+
+                <p class="disclaimer">
+                    By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+                </p>
+                
+                <div class="help-section">
+                    <details>
+                        <summary>Need help?</summary>
+                        <a href="#">Forgot Password</a><br>
+                        <a href="#">Other issues with Sign-In</a>
+                    </details>
+                </div>
+            </form>
+
+            <hr>
+
+            <p class="new-text">New to Amazon?</p>
+            <a href="Signuppage.html" class="create-account-btn">Create your Amazon account</a>
+        </div>
+
+        <footer>
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Help</a>
+            <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+        </footer>
+    </div>
+</body>
+</html>

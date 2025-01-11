@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="amazon assets\Amazon_icon.png">
+    <title>Amazon Prime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #232f3e 0%, #131921 100%);
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(240,193,75,0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .illustration {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .tv-setup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .people {
+            display: flex;
+            gap: 20px;
+            z-index: 2;
+        }
+
+        .person {
+            width: 140px;
+            height: 200px;
+            background: linear-gradient(145deg, #ffffff 0%, #f0f0f0 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .person:hover {
+            transform: scale(1.05);
+        }
+
+        .tv-screen {
+            width: 500px;
+            height: 300px;
+            background: #000;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tv-screen::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            to { left: 100%; }
+        }
+
+        .amazon-boxes {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(145deg, #f0c14b 0%, #e8b53d 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .right-section {
+            width: 40%;
+            background: rgba(255,255,255,0.1);
+            padding: 60px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            width: 140px;
+            margin-bottom: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #f0c14b, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .benefits {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #f5f5f5;
+        }
+
+        .login-button {
+            background: linear-gradient(90deg, #f0c14b, #ff9900);
+            border: none;
+            padding: 18px 40px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(240,193,75,0.3);
+            max-width: 300px;
+        }
+
+        .login-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(240,193,75,0.4);
+        }
+
+        .terms {
+            font-size: 15px;
+            margin-top: 30px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .terms a {
+            color: #f0c14b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .terms a:hover {
+            border-bottom-color: #f0c14b;
+        }
+
+        .benefits-section {
+            background: white;
+            text-align: center;
+            padding: 80px 40px;
+        }
+
+        .benefits-section h2 {
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #232f3e;
+        }
+
+        .delivery-icon {
+            width: 240px;
+            height: 240px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .delivery-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #232f3e;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .right-section {
+                width: 100%;
+                padding: 40px;
+            }
+
+            .left-section {
+                padding: 40px;
+            }
+
+            .tv-screen {
+                width: 400px;
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tv-screen {
+                width: 300px;
+                height: 180px;
+            }
+
+            .person {
+                width: 100px;
+                height: 150px;
+            }
+
+            .box {
+                width: 90px;
+                height: 90px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .benefits {
+                font-size: 18px;
+            }
+        }
+
+        .benefits-section {
+            background: white;
+            text-align: left;
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-section h2 {
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #232f3e;
+            text-align: center;
+        }
+
+        .delivery-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .delivery-image {
+            flex: 0 0 45%;
+            max-width: 500px;
+        }
+
+        .delivery-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .delivery-text {
+            flex: 1;
+        }
+
+        .delivery-text h3 {
+            font-size: 28px;
+            color: #232f3e;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .delivery-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .city-list {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .city-list strong {
+            font-weight: 600;
+            color: #232f3e;
+        }
+
+        .learn-more {
+            color: #007185;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .learn-more:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 968px) {
+            .delivery-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .delivery-image {
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+
+            .delivery-text {
+                text-align: center;
+            }
+
+            .delivery-text h3 {
+                text-align: center;
+            }
+        }
+
+        .video-section {
+            background: #f8f8f8;
+            padding: 80px 40px;
+        }
+
+        .video-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .video-image {
+            flex: 0 0 45%;
+            max-width: 500px;
+        }
+
+        .video-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-text {
+            flex: 1;
+        }
+
+        .video-text h3 {
+            font-size: 32px;
+            color: #232f3e;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .video-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .video-link {
+            color: #007185;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .video-link:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 968px) {
+            .video-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .video-image {
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+
+            .video-text {
+                text-align: center;
+            }
+
+            .video-text h3 {
+                text-align: center;
+            }
+        }
+
+        .backtotop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #37475a;
+  width: 100vw;
+  height: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+.backtotop:hover {
+  background-color: #3a4d64;
+}
+
+.line-head {
+  text-decoration: none;
+  color: rgb(252, 240, 219);
+  background-color: #37475A;
+  font-size: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  background-color: #131A22;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 2rem;
+  text-align: center;
+}
+
+.footer-head {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ff9900;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.footer-column {
+  margin: 10px;
+  text-align: justify;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-column a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+  color: #a5a5a5;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #131A22;
+}
+
+.footer-bottom img {
+  vertical-align: middle;
+  filter: invert(1);
+}
+
+.footer-bottom select {
+  background-color: #232F3E;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff9900;
+  transform: scale(1.2);
+}
+
+.backtotop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232F3E;
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backtotop:hover {
+  background-color: #37475A;
+}
+
+.info-footer {
+  text-align: left;
+}
+
+.list-footer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-align: left; 
+}
+
+.list-footer li {
+  margin-bottom: 0.5rem;
+}
+    </style>
+</head>
+<body>
+
+
+    <div id="navbar">
+
+        <img class="amazon-logo" src="./amazon assets/logo.webp">
+        <div class="location" onclick="getLocation()">
+            <span class="location-name">Deliver to Delhi 110099</span>
+            <br>
+            <span class="location-img"> <i class="fa-solid fa-location-dot"></i> </span>
+            <span class="update-location">Update Location</span>
+        </div>
+
+        <div class="search-bar">
+
+            <select name="type" class="select-type">
+                <option class="all" style="border: 4px solid #000;">All</option>
+                <option value="clothes">Alexa</option>
+                <option class="scroll">Amazon Devices</option>
+                <option value="">Amazon Fashion</option>
+                <option value="">Amazon Fresh</option>
+                <option value="">Appliances</option>
+                <option value="">Apps and Games</option>
+                <option value="">Baby</option>
+                <option value="">Beauty</option>
+                <option value="">Books</option>
+                <option value="">Car and Motorbike</option>
+                <option value="">Clothing and Accessories</option>
+                <option value="">Deals</option>
+                <option value="">Electronics</option>
+                <option value="">Furniture</option>
+            </select>
+
+            <input type="text" placeholder="Search Amazon.in" class="input-search">
+
+            <span class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="language">
+            <select name="language" class="language-list">
+                <option value="english">EN</option>
+            </select>
+        </div>     
+        <div class="sign-in">
+    <span class="sign-head">Hello, Sign In</span>
+    <div id="bottom">
+        <span class="sign-bottom">Account & Lists</span>
+        <i class="fa-solid fa-caret-down" style="color: #fff;"></i>
+    </div>
+    <div class="dropdown-menu">
+        <a href="Loginpage.html" class="dropdown-item">Sign In</a>
+        <a href="Signuppage.html" class="dropdown-item">New Customer? Sign Up</a>
+    </div>
+</div>
+
+        <div class="account">
+            <span class="location-name">Returns</span>
+            <br>
+            <span class="update-location">&Orders</span>
+        </div>
+
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+    </div>
+
+    <div class="lower-header">
+        <span class="lower-header-text">Home</span>
+        <span class="lower-header-text">Shop</span>
+        <span class="lower-header-text">Deals</span>
+        <span class="lower-header-text">New</span>
+        <span class="lower-header-text">Gift</span>
+        <span class="lower-header-text">Cart</span>
+        <span class="lower-header-text">Order</span>
+        <span class="lower-header-text">Help</span>
+        <span class="lower-header-text">Books</span>
+        <span class="lower-header-text">Music</span>
+        <span class="lower-header-text">Games</span>
+        <a href="prime.html">
+            <span class="lower-header-text">Prime</span>
+        </a>
+        <span class="lower-header-text">Kids</span>
+        <a href="contact.html" class="lower-header-text">Contact Us</a>
+        <span class="lower-header-text">More</span>
+    </div>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="illustration">
+                <div class="tv-setup">
+                    <div class="people">
+                        <div class="person"></div>
+                        <div class="person"></div>
+                    </div>
+                    <div class="tv-screen"></div>
+                </div>
+                <div class="amazon-boxes">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="/api/placeholder/140/40" alt="Amazon Prime" class="logo" />
+            <h1>Welcome to Prime</h1>
+            <p class="benefits">
+                Join millions of Prime members enjoying unlimited free, fast delivery, 
+                exclusive video streaming, ad-free music, free games, and early access 
+                to incredible deals.
+            </p>
+            <a href="#" class="login-button">Start your Prime journey</a>
+            <p class="terms">
+                By signing up for a Prime membership, you agree to the 
+                <a href="#">Amazon Prime Terms and Conditions</a>. Prime membership 
+                fees are charged upfront and cannot be paid on delivery.
+            </p>
+        </div>
+    </div>
+
+    <div class="benefits-section">
+        <h2>Enjoy these benefits with Prime</h2>
+        <div class="delivery-content">
+            <div class="delivery-image">
+                <img src="https://m.media-amazon.com/images/G/31/prime/detail_page/Prime_Detail_Page_PC_Benefits_Delivery_1344x526._CB653891553_.jpg" alt="Amazon Prime Delivery Boxes" />
+            </div>
+            <div class="delivery-text">
+                <h3>Unlimited FREE Same-day, 1-day delivery</h3>
+                <p>Why pay more for fast delivery every time you need an item quickly? As a Prime member, get unlimited FREE Same-Day, 1-Day & 2-Day Delivery on eligible items from India's largest online store, to over a hundred cities. Prime items that are not eligible for free Same-Day or 1-Day Delivery to your location, will always qualify for free Standard Delivery with no minimum purchase value. The fastest, free Prime delivery speed available for an item will be shown on the product page.</p>
+                
+                <div class="city-list">
+                    Get Same-Day Delivery to eligible pin-codes in <strong>Delhi, Mumbai, Bangalore & Hyderabad</strong> via the Prime Now App.
+                </div>
+                
+                <a href="#" class="learn-more">Learn more about all Prime delivery options</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <div class="video-content">
+            <div class="video-image">
+                <img src="https://m.media-amazon.com/images/G/31/prime/detail_page/Prime_Detail_Page_PC_VideoLaunch_1344x526._CB589732670_.jpg" alt="Prime Video Streaming Devices and Shows" />
+            </div>
+            <div class="video-text">
+                <h3>Prime Video</h3>
+                <p>With your Prime membership, you have access to the latest and exclusive Bollywood and regional blockbusters such as Kantara, Jugjugg Jeeyo, Ram Setu and Hollywood movies like Batman, Fast & Furious 9. You can also binge watch US TV shows like Young Sheldon, Suits and exclusive access to Prime Original Series Comicstaan, Breathe and Reacher.</p>
+                
+                <p>Access Prime Video anywhere: on the go or in the comfort of your living room. Watch on your Android or iOS phone, tablet, laptop, desktop, or smart TV.</p>
+                
+                <a href="#" class="video-link">Visit primevideo.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <div class="video-content">
+            <div class="video-image">
+                <img src="https://m.media-amazon.com/images/G/31/marketing/prime/pdp/Robin_Benefit2._CB592209584_.jpg" alt="Prime Video Streaming Devices and Shows" />
+            </div>
+            <div class="video-text">
+                <h3>Prime Music</h3>
+                <p>With your Prime membership, enjoy ad-free music streaming with unlimited offline downloads* across 75 million songs in multiple languages - English, Hindi, Tamil, Punjabi, Telugu, Bengali and more. Enjoy Playlists and Stations specially curated by Amazon’s music editors across moods, activities, genres, artists and decades.
+
+                    Discover a new way to find and play music - voice controlled with Alexa. Simply tap on Alexa icon in your mobile app and ask for music. No typing, no browsing, no searching - Just ask! Listen to music across devices – Android & iOS devices, Desktop app and Web Player, Amazon Fire TV sticks and Amazon Echo and other Alexa enabled devices.
+                    </p>
+                
+                <a href="#" class="video-link">Visit primemusic.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="backtotop">
+        Back to Top
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer-column">
+            <h3>Get to Know Us</h3> <a href="#">About Us</a> <a href="#">Careers</a> <a href="#">Press Releases</a>
+            <a href="#">Amazon Science</a>
+        </div>
+        <div class="footer-column">
+            <h3>Connect with Us</h3> <a href="#">Facebook</a> <a href="#">Twitter</a> <a href="#">Instagram</a>
+        </div>
+        <div class="footer-column">
+            <h3>Make Money with Us</h3> <a href="#">Sell on Amazon</a> <a href="#">Sell under Amazon Accelerator</a> <a
+                href="#">Protect and Build Your Brand</a> <a href="#">Amazon Global Selling</a> <a href="#">Supply to
+                Amazon</a> <a href="#">Become an Affiliate</a> <a href="#">Fulfilment by Amazon</a> <a
+                href="#">Advertise Your Products</a> <a href="#">Amazon Pay on Merchants</a>
+        </div>
+        <div class="footer-column">
+            <h3>Let Us Help You</h3> <a href="#">Your Account</a> <a href="#">Returns Centre</a> <a href="#">Recalls and
+                Product Safety Alerts</a> <a href="#">100% Purchase Protection</a> <a href="#">Amazon App Download</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" width="100">
+        <br><br> <select>
+            <option value="en">English</option>
+            <option value="en">हिन्दी</option>
+            <option value="en">Mararti</option>
+        </select> <select>
+            <option value="in">India</option>
+            <option value="in">UK</option>
+            <option value="in">Australia</option>
+            <option value="in">Canada</option>
+            <script src="app.js"></script>
+</body>
+</html>

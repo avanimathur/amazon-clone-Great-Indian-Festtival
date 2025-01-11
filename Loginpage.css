@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: #f3f3f3;
+}
+
+/* Amazon Logo */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Main Container Styling */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Login Box Styling */
+.login-box {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Form Label Styling */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Input Field Styling */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Button Styling */
+.continue-btn {
+    width: 100%;
+    padding: 10px;
+    background: #f7ca00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.continue-btn:hover {
+    background: #f3b800;
+}
+
+/* Disclaimer Styling */
+.disclaimer {
+    font-size: 12px;
+    margin: 15px 0;
+    text-align: left;
+    color: #555;
+}
+
+.disclaimer a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+/* Help Section Styling */
+.help-section {
+    text-align: left;
+    margin: 10px 0;
+}
+
+details {
+    cursor: pointer;
+    color: #0066c0;
+}
+
+details a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #0066c0;
+}
+
+/* Horizontal Line Styling */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* New Account Text Styling */
+.new-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Create Account Button Styling */
+.create-account-btn {
+    display: block;
+    padding: 10px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    background: #e7e9ec;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.create-account-btn:hover {
+    background: #d6d8da;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0066c0;
+    margin: 0 10px;
+}
+
+footer p {
+    margin-top: 10px;
+}
