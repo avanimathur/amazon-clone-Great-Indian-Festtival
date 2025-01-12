@@ -22,43 +22,48 @@ const conent=document.querySelector(".slide-carousel");
 conent.scrollLeft-=1100;
 event.preventDefault();
 })
-document.addEventListener('DOMContentLoaded', function() {
-    const updateLocationButton = document.querySelector(".update-location");
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById("locationModal");
+    const locationSection = document.querySelector(".location");
+    const closeModal = document.querySelector(".close");
+    const signInButton = document.getElementById("signInButton");
+    const submitPinCode = document.getElementById("submitPinCode");
+    const pinCodeInput = document.getElementById("pinCodeInput");
 
-    updateLocationButton.addEventListener('click', function(event) {
-        getLocation();
+    // Show modal when location section is clicked
+    locationSection.addEventListener("click", function () {
+        modal.style.display = "block";
+    });
+
+    // Close modal
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Handle sign-in button click
+    signInButton.addEventListener("click", function () {
+        window.location.href = "Loginpage.html";
+    });
+
+    // Handle pin code submission
+    submitPinCode.addEventListener("click", function () {
+        const pinCode = pinCodeInput.value;
+        if (pinCode) {
+            document.querySelector(".location-name").innerText = `Deliver to ${pinCode}`;
+            modal.style.display = "none";
+        } else {
+            alert("Please enter a valid pin code.");
+        }
     });
 });
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
 
-function showPosition(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const apiKey = 'yourAPIKey';
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.results && data.results.length > 0) {
-                const components = data.results[0].components;
-                const city = components.city || components.town || components.village || "Unknown City";
-                document.querySelector(".location-name").innerText = `Deliver to ${city}`;
-            } else {
-                console.error("No results found for the given coordinates.");
-                alert("Unable to retrieve location details.");
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching location:", error);
-            alert("Unable to retrieve location.");
-        });
-}
 
 const toTopButton = document.querySelector('.backtotop');
 

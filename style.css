@@ -664,3 +664,134 @@ body {
   margin-top: 5px;
   color: red;
 }
+
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; 
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.modal-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#pinCodeInput {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#submitPinCode, #signInButton {
+  display: inline-block;
+  background-color: rgb(255, 213, 2);
+  color: #111;
+  border: 1px solid #ffa41c;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 14px;
+  
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(15, 17, 17, 0.15);
+}
+#signInButton{
+  width: 100%;
+}
+#submitPinCode{
+  width: 30%;
+  background-color: white;
+  border-color: black;
+}
+
+#signInButton:hover {
+  background-color: rgb(232, 193, 0);
+  border-color: #f08804;
+}
+#submitPinCode:hover{
+  background-color: rgb(251, 249, 249);
+
+}
+
+.or-divider {
+  margin: 20px 0;
+  color: #767676;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.or-divider:before,
+.or-divider:after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+}
+
+.or-divider:before {
+  left: 0;
+}
+
+.or-divider:after {
+  right: 0;
+}
+.modal p{
+  font-size: small;
+  color: grey;
+}

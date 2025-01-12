@@ -19,13 +19,27 @@
         <a href="/index.html">
             <img class="amazon-logo" src="./amazon assets/logo.webp">
         </a>
-
-        <div class="location" onclick="getLocation()">
-            <span class="location-name">Deliver to Delhi 110099</span>
+        <div class="location">
+            <span class="location-name">Deliver to Your Location</span>
             <br>
-            <span class="location-img"> <i class="fa-solid fa-location-dot"></i> </span>
+            <span class="location-img"><i class="fa-solid fa-location-dot"></i></span>
             <span class="update-location">Update Location</span>
         </div>
+        <div id="locationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Choose Your Location</h3>
+                <p>Select a delivery location to see product availability and delivery options</p>
+                <button id="signInButton">Sign in to see your address</button>
+                <div class="or-divider">or enter an Indian pincode</div>
+                <input type="text" id="pinCodeInput" placeholder="Enter your pin code">
+                <button id="submitPinCode">Apply</button>
+            </div>
+        </div>
+        
+
+       
+        
 
         <div class="search-bar">
 
