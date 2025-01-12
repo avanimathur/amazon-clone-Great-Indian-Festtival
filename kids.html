@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="amazon assets\Amazon_icon.png">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+       /* General Section Styling */
+.kids-section {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+/* Grid Container for Kids Items */
+.kids-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Item Styling */
+.kids-item {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.kids-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.kids-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Item Name Styling */
+.item-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+/* Price Styling */
+.price {
+    font-size: 14px;
+    color: #b12704;
+    font-weight: bold;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="navbar">
+        <!-- Make the amazon logo clickable which will bring the user to index.html -->
+        <a href="/index.html">
+            <img class="amazon-logo" src="./amazon assets/logo.webp">
+        </a>
+
+        <div class="location" onclick="getLocation()">
+            <span class="location-name">Deliver to Delhi 110099</span>
+            <br>
+            <span class="location-img"> <i class="fa-solid fa-location-dot"></i> </span>
+            <span class="update-location">Update Location</span>
+        </div>
+
+        <div class="search-bar">
+
+            <select name="type" class="select-type">
+                <option class="all" style="border: 4px solid #000;">All</option>
+                <option value="clothes">Alexa</option>
+                <option class="scroll">Amazon Devices</option>
+                <option value="">Amazon Fashion</option>
+                <option value="">Amazon Fresh</option>
+                <option value="">Appliances</option>
+                <option value="">Apps and Games</option>
+                <option value="">Baby</option>
+                <option value="">Beauty</option>
+                <option value="">Books</option>
+                <option value="">Car and Motorbike</option>
+                <option value="">Clothing and Accessories</option>
+                <option value="">Deals</option>
+                <option value="">Electronics</option>
+                <option value="">Furniture</option>
+            </select>
+
+            <input type="text" placeholder="Search Amazon.in" class="input-search">
+
+            <span class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-button">
+                <img src="https://flagcdn.com/w20/us.png" alt="English Flag"><p>EN</p>
+                <i class="fa-solid fa-caret-down" style="margin-left: auto; color:#fff; size:10px,16px" ></i>
+            </div>
+            <div class="dropdown-content">
+            <a href="#" data lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English Flag"> EN</a>
+            <a href="#" data lang="hin"><img src="https://flagcdn.com/w20/in.png" alt="India flag">HIN</a>
+            <a href="#" data lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spain flag">ES</a>
+            <a href="#" data lang="de"><img src="https://flagcdn.com/w20/de.png" alt="German flag">DE</a>
+            <a href="#" data lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French flag">FR</a>
+            <a href="#" data lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italian flag">IT</a>
+            </div>
+        </div>  
+       
+        <div class="sign-in">
+    <span class="sign-head">Hello, Sign In</span>
+    <div id="bottom">
+        <span class="sign-bottom">Account & Lists</span>
+        <i class="fa-solid fa-caret-down" style="color: #fff;"></i>
+    </div>
+    <div class="dropdown-menu">
+        <a href="Loginpage.html" class="dropdown-item">Sign In</a>
+        <a href="Signuppage.html" class="dropdown-item">New Customer? Sign Up</a>
+    </div>
+</div>
+
+        <div class="account">
+            <span class="location-name">Returns</span>
+            <br>
+            <span class="update-location">& Orders</span>
+        </div>
+
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+    </div>
+    <section class="kids-section">
+        <div class="kids-container">
+            <div class="kids-item">
+                <img src="./amazon assets/toy1.jpg" alt="Toy 1">
+                <p class="item-name">Puzzel Set</p>
+                <span class="price">$100.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy2.jpg" alt="Toy 2">
+                <p class="item-name">Shinchan Toy</p>
+                <span class="price">$150.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy3.jpg" alt="Toy 3">
+                <p class="item-name">Gaming Set</p>
+                <span class="price">$322.49</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy4.jpg" alt="Toy 4">
+                <p class="item-name">Spider Man Toy</p>
+                <span class="price">$863.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy 5.jpg" alt="Toy 5">
+                <p class="item-name">Danching cactus</p>
+                <span class="price">$866.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy 6.jpg" alt="Toy 6">
+                <p class="item-name">Cotton Toy</p>
+                <span class="price">$566.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy 7.jpg" alt="Toy 7">
+                <p class="item-name">Lovey Dovey Soft Toy</p>
+                <span class="price">$450.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy 45.jpg" alt="Toy 7">
+                <p class="item-name">House Maker</p>
+                <span class="price">$500.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy 9.jpg" alt="Toy 7">
+                <p class="item-name">Sunny Car</p>
+                <span class="price">$860.99</span>
+            </div>
+            <div class="kids-item">
+                <img src="./amazon assets/toy 10.jpg" alt="Toy 7">
+                <p class="item-name">Kitchen Set</p>
+                <span class="price">$600.99</span>
+            </div>
+        </div>
+    </section>
+    
+
+<div class="backtotop">
+        Back to Top
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer-column">
+            <h3>Get to Know Us</h3> 
+            <a href="#" >About Us</a> 
+            <a href="#" >Careers</a> 
+            <a href="#" >Press Releases</a>
+            <a href="#" >Amazon Science</a>
+        </div>
+        <div class="footer-column">
+            <h3>Connect with Us</h3> 
+            <a href="#">Facebook</a> 
+            <a href="#">Twitter</a> 
+            <a href="#">Instagram</a>
+        </div>
+        <div class="footer-column">
+            <h3>Make Money with Us</h3> <a href="#">Sell on Amazon</a> <a href="#">Sell under Amazon Accelerator</a> <a
+                href="#">Protect and Build Your Brand</a> <a href="#">Amazon Global Selling</a> <a href="#">Supply to
+                Amazon</a> <a href="#">Become an Affiliate</a> <a href="#">Fulfilment by Amazon</a> <a
+                href="#">Advertise Your Products</a> <a href="#">Amazon Pay on Merchants</a>
+        </div>
+        <div class="footer-column">
+            <h3>Let Us Help You</h3> <a href="#">Your Account</a> <a href="#">Returns Centre</a> <a href="#">Recalls and
+                Product Safety Alerts</a> <a href="#">100% Purchase Protection</a> <a href="#">Amazon App Download</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="/index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" width="100">
+        </a>
+        <br><br> <select>
+            <option value="en">English</option>
+            <option value="hindi">हिन्दी</option>
+            <option value="marathi">Marathi</option>
+        </select> <select>
+            <option value="in">India</option>
+            <option value="uk">UK</option>
+            <option value="usa">Australia</option>
+            <option value="canada">Canada</option>
+            
+        <script src="app.js"></script>
+</body>
+
+</html>
