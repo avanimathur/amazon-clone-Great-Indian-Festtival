@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="amazon assets\Amazon_icon.png">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="help.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <!-- Make the amazon logo clickable which will bring the user to index.html -->
+        <a href="/index.html">
+            <img class="amazon-logo" src="./amazon assets/logo.webp">
+        </a>
+
+        <div class="location" onclick="getLocation()">
+            <span class="location-name">Deliver to Delhi 110099</span>
+            <br>
+            <span class="location-img"> <i class="fa-solid fa-location-dot"></i> </span>
+            <span class="update-location">Update Location</span>
+        </div>
+
+        <div class="search-bar">
+
+            <select name="type" class="select-type">
+                <option class="all" style="border: 4px solid #000;">All</option>
+                <option value="clothes">Alexa</option>
+                <option class="scroll">Amazon Devices</option>
+                <option value="">Amazon Fashion</option>
+                <option value="">Amazon Fresh</option>
+                <option value="">Appliances</option>
+                <option value="">Apps and Games</option>
+                <option value="">Baby</option>
+                <option value="">Beauty</option>
+                <option value="">Books</option>
+                <option value="">Car and Motorbike</option>
+                <option value="">Clothing and Accessories</option>
+                <option value="">Deals</option>
+                <option value="">Electronics</option>
+                <option value="">Furniture</option>
+            </select>
+
+            <input type="text" placeholder="Search Amazon.in" class="input-search">
+
+            <span class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-button">
+                <img src="https://flagcdn.com/w20/us.png" alt="English Flag"><p>EN</p>
+                <i class="fa-solid fa-caret-down" style="margin-left: auto; color:#fff; size:10px,16px" ></i>
+            </div>
+            <div class="dropdown-content">
+            <a href="#" data lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English Flag"> EN</a>
+            <a href="#" data lang="hin"><img src="https://flagcdn.com/w20/in.png" alt="India flag">HIN</a>
+            <a href="#" data lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spain flag">ES</a>
+            <a href="#" data lang="de"><img src="https://flagcdn.com/w20/de.png" alt="German flag">DE</a>
+            <a href="#" data lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French flag">FR</a>
+            <a href="#" data lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italian flag">IT</a>
+            </div>
+        </div>  
+       
+        <div class="sign-in">
+    <span class="sign-head">Hello, Sign In</span>
+    <div id="bottom">
+        <span class="sign-bottom">Account & Lists</span>
+        <i class="fa-solid fa-caret-down" style="color: #fff;"></i>
+    </div>
+    <div class="dropdown-menu">
+        <a href="Loginpage.html" class="dropdown-item">Sign In</a>
+        <a href="Signuppage.html" class="dropdown-item">New Customer? Sign Up</a>
+    </div>
+</div>
+
+        <div class="account">
+            <span class="location-name">Returns</span>
+            <br>
+            <span class="update-location">& Orders</span>
+        </div>
+
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+    </div>
+
+    <div class="lower-header">
+        <span class="lower-header-text">
+            <a href="/index.html">Home</a>
+        </span>
+        <span class="lower-header-text">Shop</span>
+        <span class="lower-header-text">Deals</span>
+        <span class="lower-header-text">New</span>
+        <span class="lower-header-text">Gift</span>
+        <span class="lower-header-text">Cart</span>
+        <span class="lower-header-text">Order</span>
+        <a href="help.html" class="lower-header-text">Help</a>
+        <span class="lower-header-text">Books</span>
+        <span class="lower-header-text">Music</span>
+        <span class="lower-header-text">Games</span>
+        <span class="lower-header-text">Prime</span>
+        <span class="lower-header-text">Kids</span>
+        <a href="contact.html" class="lower-header-text">Contact Us</a>
+        <span class="lower-header-text">More</span>
+    </div>
+    <!-- help section is start -->
+    <main class="help-section">
+        <!-- Alert Section -->
+        <div class="alert">
+            <p>
+                ⚠ For information about orders, check the <a href="#">Your Orders</a> page.
+                ⚠ See <a href="#">Important Messages</a> for updates.
+            </p>
+        </div>
+    
+        <!-- Main Heading -->
+        <h1>Hello. What can we help you with?</h1>
+        
+        <!-- Help Options Section -->
+        <section class="help-options">
+            <h2>Some things you can do here</h2>
+            <div class="options-grid">
+                <div class="option">📦 <br><strong>Your Orders</strong><br> Track packages, Edit or cancel orders</div>
+                <div class="option">🔄 <br><strong>Returns and Refunds</strong><br> Return or exchange items, Print return labels</div>
+                <div class="option">🏠 <br><strong>Manage Addresses</strong><br> Update addresses, Add landmark details</div>
+                <div class="option">👑 <br><strong>Manage Prime</strong><br> View your benefits, Membership details</div>
+                <div class="option">💳 <br><strong>Payment Settings</strong><br> Add or edit payment methods</div>
+                <div class="option">🔐 <br><strong>Account Settings</strong><br> Change your email or password</div>
+                <div class="option">📲 <br><strong>Digital Services</strong><br> Device help and support</div>
+                <div class="option">📞 <br><strong>Contact Support</strong><br> Get help with orders, Talk to a representative</div> <!-- New Option Added -->
+            </div>
+        </section>
+        
+        
+    
+        <!-- Search Bar Section -->
+        <section class="search-help">
+            <h2>Find more solutions</h2>
+            <input type="text" placeholder="Type something like 'question about a charge'">
+        </section>
+    
+        <!-- Browse Topics Section -->
+        <section class="browse-topics">
+            <h2>Browse Help Topics</h2>
+            <div class="topics">
+                <ul>
+                    <li>Shipping & Delivery</li>
+                    <li>Amazon Prime</li>
+                    <li>Payments & Pricing</li>
+                    <li>Amazon Pay</li>
+                    <li>Product Troubleshooting</li>
+                    <li>Amazon Bazaar</li>
+                    <li>Returns, Refunds, Replacement</li>
+                </ul>
+                <ul>
+                    <li>Ordering</li>
+                    <li>Managing Your Account</li>
+                    <li>Devices & Digital Services (D2S)</li>
+                    <li>More Help (D2S)</li>
+                    <li>Amazon Business</li>
+                    <li>Other Topics & More Help</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer-column">
+            <h3>Get to Know Us</h3> 
+            <a href="#" >About Us</a> 
+            <a href="#" >Careers</a> 
+            <a href="#" >Press Releases</a>
+            <a href="#" >Amazon Science</a>
+        </div>
+        <div class="footer-column">
+            <h3>Connect with Us</h3> 
+            <a href="#">Facebook</a> 
+            <a href="#">Twitter</a> 
+            <a href="#">Instagram</a>
+        </div>
+        <div class="footer-column">
+            <h3>Make Money with Us</h3> <a href="#">Sell on Amazon</a> <a href="#">Sell under Amazon Accelerator</a> <a
+                href="#">Protect and Build Your Brand</a> <a href="#">Amazon Global Selling</a> <a href="#">Supply to
+                Amazon</a> <a href="#">Become an Affiliate</a> <a href="#">Fulfilment by Amazon</a> <a
+                href="#">Advertise Your Products</a> <a href="#">Amazon Pay on Merchants</a>
+        </div>
+        <div class="footer-column">
+            <h3>Let Us Help You</h3> <a href="#">Your Account</a> <a href="#">Returns Centre</a> <a href="#">Recalls and
+                Product Safety Alerts</a> <a href="#">100% Purchase Protection</a> <a href="#">Amazon App Download</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="/index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" width="100">
+        </a>
+        <br><br> <select>
+            <option value="en">English</option>
+            <option value="hindi">हिन्दी</option>
+            <option value="marathi">Marathi</option>
+        </select> <select>
+            <option value="in">India</option>
+            <option value="uk">UK</option>
+            <option value="usa">Australia</option>
+            <option value="canada">Canada</option>
+            
+        <script src="app.js"></script>
+</body>
+
+</html>
