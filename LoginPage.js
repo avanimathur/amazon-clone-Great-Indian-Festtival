@@ -24,3 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+const form = document.getElementById('loginForm');
+const passwordInput = document.getElementById('password');
+const passwordError = document.getElementById('password-error');
+
+form.addEventListener('submit', (event) => {
+    const passwordValue = passwordInput.value;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!passwordRegex.test(passwordValue)) {
+        event.preventDefault(); // Prevent form submission
+        passwordError.style.display = 'block'; // Show error message
+    } else {
+        passwordError.style.display = 'none'; // Hide error message
+    }
+});
