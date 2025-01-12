@@ -1,3 +1,13 @@
+<!--  fix-color-mismatch-and-add-carousels -->
+# Amazon-Clone
+
+<hr>
+https://amazon-clone-greatindianfestival.netlify.app/
+<br>
+This project is a replica of the front-end of the popular e-commerce platform Amazon. 
+<br>
+<b>Technologies Used : </b> HTML | CSS | JavaScript
+
 # Amazon Clone 
 
 This project is a front-end replica of the popular e-commerce platform **Amazon**. It replicates the user interface and layout of Amazon's homepage using HTML, CSS, and JavaScript to demonstrate how to build a basic e-commerce website.
@@ -57,3 +67,4 @@ To run this project locally, follow these steps:
    ```bash
    cd amazon-clone
 
+<!-- >>>>>>> main -->
