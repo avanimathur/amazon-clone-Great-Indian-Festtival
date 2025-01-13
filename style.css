@@ -664,3 +664,50 @@ body {
   margin-top: 5px;
   color: red;
 }
+
+.personalised-recommendations {
+    text-align: center;
+    padding: 8px 100px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.personalised-recommendations h2 {
+    font-size: 24px;
+    margin: 40px 0 8px 0;
+    color: #0F1111;
+}
+
+.personalised-recommendations hr {
+    margin: 0 -100px;
+    border: none;
+    border-top: 1px solid #DDD;
+}
+
+.personalised-recommendations p {
+    font-size: 11px;
+    margin: 4px 0 25px 0;
+}
+
+.sign-in-button {
+    background-color: #ffd700;
+    border: none;
+    padding: 8px 100px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.sign-in-button:hover {
+    background-color: #ffcc00;
+}
+
+.start-here-link {
+    color: #0066c0;
+}
+
+.start-here-link:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
