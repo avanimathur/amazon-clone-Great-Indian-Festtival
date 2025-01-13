@@ -32,62 +32,49 @@ body {
   align-items: center;
 }
 
-.amazon-logo {
-  width: 110px;
-  height: 35px;
-  margin-left: 20px;
-}
-
 .amazon-logo:hover {
   outline: 0.5px solid white;
-  outline-offset: 10px;
-}
-
-.location {
-  color: white;
+  outline-offset: 12px;
 }
 
 .location:hover {
   outline: 0.5px solid white;
-  outline-offset: 10px;
+  outline-offset: 7px;
 }
 
+.location-text{
+  line-height: 15px;
+}
 .location-name {
-  font-size: 0.85rem;
+  color: lightgray;
+  font-size: 0.80rem;
 }
 
 .update-location {
   font-size: 0.9rem;
   font-weight: bold;
 }
-
-.search-bar {
-  display: flex;
-  align-items: center;
+.search-bar{
+  width: 45vw;
 }
-
 .select-type {
   background-color: lightgrey;  
-  height: 2.6rem;  
   width: 4rem;  
   border-radius: 5px 0 0 5px; 
-  padding-left: 15px;  
-  padding-top: 3px; 
+  padding: 3px 5px 0 15px;
   border: none;  
   margin-right: 0px; 
   margin-top: 0;  
 }
-
-.select-type:hover {
-  background-color: #cbcbcb;
-  transition: background-color 0.3s ease;
+.input-search:focus .search-bar{
+  outline: 0.2px solid yellow;
+  outline-offset: 1px;
 }
 
 .input-search {
   height: 2.5rem; 
-  width: 45vw; 
+  width: 36vw;
   background-color: #ffffff; 
-  border-radius: 0; 
   padding-left: 10px; 
   border: none; 
 }
@@ -98,43 +85,22 @@ body {
 }
 
 .search-icon {
-  margin-left: 0;  
-  margin-top: 0.4px; 
-  background-color: rgb(236, 147, 31);  
   padding: 0.65rem 1rem;  
   border-radius: 0 5px 5px 0;  
   cursor: pointer;  
-  height: 1.4rem; 
   display: flex;
   align-items: center;  
 }
 
-
 .search-icon:hover {
   filter: brightness(80%);
 }
-
-
 
 .dropdown-button:hover {
   outline: 0.2px solid white;
   outline-offset: 8px;
 }
 
-.sign-in {
-  position: relative;
-  display: flex; 
-  flex-direction: column;
-  color: white;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-}
-
-#bottom {
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -142,21 +108,17 @@ body {
 .dropdown-button {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 0 10px 0 10px;
   background-color: #131A22;
   border: 1px solid #131A22;
   cursor: pointer;
   color: white;
-  gap: 2px;
   font-weight: 600;
-  margin-left: 15px;
-  
 }
 
 .dropdown-button img {
   width: 20px;
   height: 15px;
-  margin-right: 10px;
 }
 .dropdown-content {
   display: none;
@@ -188,6 +150,23 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.sign-in {
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.sign-show{
+  line-height: 15px;
+}
+#bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
 }
 .dropdown-menu {
   display: none;
@@ -246,9 +225,7 @@ body {
 }
 
 .account {
-  display: inline-block;
-  margin-left: 2rem;
-  color: white;
+  line-height: 15px;
 }
 
 .account:hover {
@@ -259,12 +236,10 @@ body {
 .cart {
   height: 15px;
   width: 35px;
-
-  color: white;
-  :hover {
-    outline: 0.5px solid white;
-    outline-offset: 10px;
-  }
+}
+.cart:hover {
+  outline: 0.5px solid white;
+  outline-offset: 10px;
 }
 
 .lower-header {
