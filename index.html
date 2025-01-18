@@ -108,7 +108,7 @@
         <span class="lower-header-text">Music</span>
         <span class="lower-header-text">Games</span>
 
-        <span class="lower-header-text">Prime</span>
+<!--         <span class="lower-header-text">Prime</span> -->
         <a href="kids.html" class="lower-header-text">Kids</a>
 
         <a href="prime.html">
@@ -247,7 +247,60 @@
             <li><img src="./amazon assets/bed18.png" class="slide-img"></li>
         </ul>
     </div>
-
+    <br>
+    <div class="carousel">
+        <h1 class="carousel-head">Upto 35% off | Automobile Parts</h1>
+        <div class="left-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="right-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <ul class="slide-carousel">
+            <li><img src="./amazon assets/auto1.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto2.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto3.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto4.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto5.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto6.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto7.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto8.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto9.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/auto10.jpg" class="slide-img"></li>
+        </ul>
+    </div>
+    <br>
+    <div class="carousel">
+        <h1 class="carousel-head">Save upto ₹2999 | Electronics</h1>
+        <div class="left-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="right-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <ul class="slide-carousel">
+            <li><img src="./amazon assets/elec1.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec2.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec3.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec4.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec5.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec6.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec7.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec8.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec9.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/elec10.jpg" class="slide-img"></li>
+        </ul>
+    </div>
+    <br>
+    <div class="carousel">
+        <h1 class="carousel-head">Get exclusive items | Home essentials</h1>
+        <div class="left-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="right-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <ul class="slide-carousel">
+            <li><img src="./amazon assets/home1.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home2.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home3.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home4.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home5.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home6.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home7.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home8.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home9.jpg" class="slide-img"></li>
+            <li><img src="./amazon assets/home10.jpg" class="slide-img"></li>
+        </ul>
+    </div>
 
     <div class="electronics-section">
         <h1 class="electronics-head">Best Deals on Electronics</h1>
@@ -308,6 +361,37 @@
         Back to Top
     </div>
 
+    <!-- chatbot is started -->
+    <div id="chatbot-icon" class="chatbot-icon">
+        <img src="chatbott.png" alt="chatbot images">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="chatbot-window">
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+
+        <!-- Predefined Questions Section -->
+        <div class="predefined-questions">
+            <button class="question-btn" onclick="chatbotResponse('order')">Order</button>
+            <button class="question-btn" onclick="chatbotResponse('returns')">Returns</button>
+            <button class="question-btn" onclick="chatbotResponse('payment')">Payment</button>
+            <button class="question-btn" onclick="chatbotResponse('address')">Address</button>
+        </div>
+
+        <!-- User Input Section -->
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-message">Send</button>
+        </div>
+
+        <!-- Close Chat Button -->
+        <button id="close-chat" class="close-chat">Close</button>
+    </div>
+
+    <!-- Chatbot Background -->
+    <div id="chatbot-background" class="chatbot-background"></div>
+
+    
     <!-- Footer -->
 
     <div class="footer">
