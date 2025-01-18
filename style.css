@@ -1,5 +1,5 @@
 /* Takes care of all the anchor tags throught the html file */
-html a{
+html a {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -12,17 +12,21 @@ body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
-        
+
 .lower-header .lower-header-text {
-  text-decoration: none; /* Removes underline */
-  color: white; /* Matches text color of other spans */
-  cursor: pointer; /* Changes cursor to pointer for links */
+  text-decoration: none;
+  /* Removes underline */
+  color: white;
+  /* Matches text color of other spans */
+  cursor: pointer;
+  /* Changes cursor to pointer for links */
 }
 
 .lower-header .lower-header-text:hover {
-  text-decoration: underline; /* Optional: Add underline on hover for all */
+  text-decoration: underline;
+  /* Optional: Add underline on hover for all */
 }
-    
+
 #navbar {
   background-color: #131a22;
   height: 70px;
@@ -67,15 +71,15 @@ body {
 }
 
 .select-type {
-  background-color: lightgrey;  
-  height: 2.6rem;  
-  width: 4rem;  
-  border-radius: 5px 0 0 5px; 
-  padding-left: 15px;  
-  padding-top: 3px; 
-  border: none;  
-  margin-right: 0px; 
-  margin-top: 0;  
+  background-color: lightgrey;
+  height: 2.6rem;
+  width: 4rem;
+  border-radius: 5px 0 0 5px;
+  padding-left: 15px;
+  padding-top: 3px;
+  border: none;
+  margin-right: 0px;
+  margin-top: 0;
 }
 
 .select-type:hover {
@@ -84,12 +88,12 @@ body {
 }
 
 .input-search {
-  height: 2.5rem; 
-  width: 45vw; 
-  background-color: #ffffff; 
-  border-radius: 0; 
-  padding-left: 10px; 
-  border: none; 
+  height: 2.5rem;
+  width: 45vw;
+  background-color: #ffffff;
+  border-radius: 0;
+  padding-left: 10px;
+  border: none;
 }
 
 .input-search:hover {
@@ -98,15 +102,15 @@ body {
 }
 
 .search-icon {
-  margin-left: 0;  
-  margin-top: 0.4px; 
-  background-color: rgb(236, 147, 31);  
-  padding: 0.65rem 1rem;  
-  border-radius: 0 5px 5px 0;  
-  cursor: pointer;  
-  height: 1.4rem; 
+  margin-left: 0;
+  margin-top: 0.4px;
+  background-color: rgb(236, 147, 31);
+  padding: 0.65rem 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  height: 1.4rem;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
 
@@ -123,7 +127,7 @@ body {
 
 .sign-in {
   position: relative;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   color: white;
   font-family: Arial, sans-serif;
@@ -135,10 +139,12 @@ body {
   align-items: center;
   margin-top: 0.5rem;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-button {
   display: flex;
   align-items: center;
@@ -150,7 +156,7 @@ body {
   gap: 2px;
   font-weight: 600;
   margin-left: 15px;
-  
+
 }
 
 .dropdown-button img {
@@ -158,6 +164,7 @@ body {
   height: 15px;
   margin-right: 10px;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -168,6 +175,7 @@ body {
   border-radius: 4px;
   min-width: 200px;
 }
+
 .dropdown-content a {
   color: black;
   padding: 10px;
@@ -189,10 +197,11 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -261,6 +270,7 @@ body {
   width: 35px;
 
   color: white;
+
   :hover {
     outline: 0.5px solid white;
     outline-offset: 10px;
@@ -320,27 +330,35 @@ body {
   0% {
     transform: translateX(0%);
   }
+
   20% {
     transform: translateX(0%);
   }
+
   25% {
     transform: translateX(-100%);
   }
+
   45% {
     transform: translateX(-100%);
   }
+
   50% {
     transform: translateX(-200%);
   }
+
   70% {
     transform: translateX(-200%);
   }
+
   75% {
     transform: translateX(-300%);
   }
+
   95% {
     transform: translateX(-300%);
   }
+
   100% {
     transform: translateX(-400%);
   }
@@ -484,6 +502,7 @@ body {
   width: 100vw;
   margin-right: 40px;
 }
+
 .single-img-box {
   display: inline-block;
   background-color: white;
@@ -651,7 +670,7 @@ body {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.8;
-  text-align: left; 
+  text-align: left;
 }
 
 .list-footer li {
@@ -663,4 +682,198 @@ body {
   font-size: 12px;
   margin-top: 5px;
   color: red;
+}
+
+ /* Chatbot Icon */
+ .chatbot-icon {
+  position: fixed;
+  bottom: 10px;  
+  right: 10px;   
+  width: 60px;   
+  height: 60px;  
+  background-color: #000000; 
+  border-radius: 50%;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  z-index: 10000; 
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.chatbot-icon img {
+  width: 60%;  
+  height: 60%;
+  object-fit: contain;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1); 
+}
+
+/* Chatbot Window */
+.chatbot-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  display: none;
+  z-index: 9999;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chatbot-window .chatbot-messages {
+  max-height: px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.chatbot-window .user-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.chatbot-window .user-input input {
+  width: 75%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.chatbot-window .user-input input:focus {
+  border-color: #FF9900;
+  /* Amazon's yellow */
+}
+
+.chatbot-window .user-input button {
+  width: 22%;
+  padding: 15px;
+  background-color: #FF9900;
+  /* Amazon's yellow */
+  border: none;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-window .user-input button:hover {
+  background-color: #F76C00;
+  /* Darker yellow on hover */
+}
+
+.chatbot-window .close-chat {
+  background-color: #FF6347;
+  /* Red for close button */
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-window .close-chat:hover {
+  background-color: #e53e3e;
+}
+
+/* Blurred background */
+.chatbot-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  z-index: 9998;
+  display: none;
+}
+
+/* Chat bubbles styles */
+.message {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+
+.message.user {
+  background-color: #d1e7ff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.bot {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+/* Predefined questions */
+.predefined-questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.predefined-questions .question-btn {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.predefined-questions .question-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Chatbot window responsiveness */
+@media (max-width: 768px) {
+  .chatbot-window {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .chatbot-icon {
+    bottom: 30px;
+    right: 30px;
+    padding: 18px;
+  }
 }

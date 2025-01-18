@@ -308,6 +308,37 @@
         Back to Top
     </div>
 
+    <!-- chatbot is started -->
+    <div id="chatbot-icon" class="chatbot-icon">
+        <img src="chatbott.png" alt="chatbot images">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="chatbot-window">
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+
+        <!-- Predefined Questions Section -->
+        <div class="predefined-questions">
+            <button class="question-btn" onclick="chatbotResponse('order')">Order</button>
+            <button class="question-btn" onclick="chatbotResponse('returns')">Returns</button>
+            <button class="question-btn" onclick="chatbotResponse('payment')">Payment</button>
+            <button class="question-btn" onclick="chatbotResponse('address')">Address</button>
+        </div>
+
+        <!-- User Input Section -->
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-message">Send</button>
+        </div>
+
+        <!-- Close Chat Button -->
+        <button id="close-chat" class="close-chat">Close</button>
+    </div>
+
+    <!-- Chatbot Background -->
+    <div id="chatbot-background" class="chatbot-background"></div>
+
+    
     <!-- Footer -->
 
     <div class="footer">
