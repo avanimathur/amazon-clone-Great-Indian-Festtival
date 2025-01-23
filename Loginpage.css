@@ -162,3 +162,9 @@ footer a {
 footer p {
     margin-top: 10px;
 }
+
+/* sign-up page */
+.container-signup-amazon-logo{
+    text-align: center;
+    padding-top:10vh;
+}
