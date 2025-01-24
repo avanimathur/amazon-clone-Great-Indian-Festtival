@@ -14,13 +14,26 @@
             <h2>Sign in</h2>
             <form id="loginForm" action="/LoginPage.js" method="POST" novalidate>
                 <label for="email">Email or mobile phone number</label>
-                <input type="text" id="email" name="email" required>
-                
-                <script src="LoginPage.js" defer></script>
-
+                <input type="text" id="email" name="email" placeholder="Enter your email or phone number" required>
                 <span id="error-message" class="error-message" style="color: red; display: none;">
                     Please enter a valid email or phone number.
                 </span>
+                <script src="LoginPage.js" defer></script>
+
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <span id="password-error" style="color: red; display: none;">Password must contain:
+                    <ul>
+                        <li>At least 8 characters</li>
+                        <li>At least one uppercase letter</li>
+                        <li>At least one lowercase letter</li>
+                        <li>At least one number</li>
+                        <li>At least one special character (@$!%*?&)</li>
+                    </ul>
+                </span>
+
+                
 
                 <button type="submit" class="continue-btn">Continue</button>
 

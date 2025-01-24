@@ -683,7 +683,23 @@ body {
   margin-top: 5px;
   color: red;
 }
+.lower-header-text {
+  display: inline-block; /* Ensures the transform works correctly */
+  transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition for the transform and color */
+  cursor: pointer; /* Indicates it's clickable */
+}
 
+.lower-header-text:hover {
+  color:rgb(255, 220, 156); /* Optional: Change text color on hover */
+  transform: translateY(-2px); /* Move text upward slightly */
+}
+
+.lower-header-text:active {
+  transform: translateY(-4px); /* Move text further up when pressed */
+  color: #0056b3; /* Optional: Darker color when active */
+}
+
+=======
  /* Chatbot Icon */
  .chatbot-icon {
   position: fixed;
