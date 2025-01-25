@@ -108,7 +108,7 @@
 
         <form class="contact-form" onsubmit="handleSubmit(event)">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="name" pattern = "[a-z A-Z]{2,20}" name="name" placeholder="Enter your name" required>
 
             <label for="email">Your Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
