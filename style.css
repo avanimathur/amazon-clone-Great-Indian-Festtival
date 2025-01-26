@@ -913,39 +913,60 @@ body {
 
 /* Recommended Products List */
 .recommended-products {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 20px; /* Space between items */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 20px; /* Space between items */
 }
 
 /* Individual Recommended Product Item */
 .recommended-products li {
-    background-color: #f9f9f9; /* Light background for items */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Padding inside items */
-    text-align: center; /* Center text */
-    flex: 1 1 30%; /* Flex-grow, flex-shrink, and basis for responsive layout */
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f9f9f9; /* Light background for items */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding inside items */
+  text-align: center; /* Center text */
+  flex: 1 1 30%; /* Flex-grow, flex-shrink, and basis for responsive layout */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Individual Product Item */
+.recommended-products li:hover {
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+  background-color: #ffffff; /* Brighten background slightly */
 }
 
 /* Image Styling for Recommended Products */
 .recommended-img {
-    width: 100px; /* Fixed width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 100px; /* Maximum height */
-    object-fit: cover; /* Cover the area without distortion */
-    margin-bottom: 10px; /* Space below the image */
+  width: 100px; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100px; /* Maximum height */
+  object-fit: cover; /* Cover the area without distortion */
+  margin-bottom: 10px; /* Space below the image */
+  transition: transform 0.3s ease; /* Smooth transition for image zoom */
+}
+
+/* Image Zoom Effect on Hover */
+.recommended-products li:hover .recommended-img {
+  transform: scale(1.1); /* Slightly zoom the image on hover */
 }
 
 /* Product Name and Price Styling */
 .recommended-products p {
-    font-size: 14px; /* Font size for product name */
-    color: #555; /* Darker gray for text */
-    margin: 5px 0; /* Space above and below */
+  font-size: 14px; /* Font size for product name */
+  color: #555; /* Darker gray for text */
+  margin: 5px 0; /* Space above and below */
 }
+
+/* Product Name and Price on Hover */
+.recommended-products li:hover p {
+  color: #000; /* Change text color to black for better contrast */
+  font-weight: bold; /* Make the text bold on hover */
+}
+
 
 /* Footer Styling */
 .footer {
