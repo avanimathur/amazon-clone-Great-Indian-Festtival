@@ -120,12 +120,21 @@ dropdownItems.forEach(item => {
 });
 
 
-const left=document.querySelector(".left-btn");
-left.addEventListener("click",function(event){
-const conent=document.querySelector(".slide-carousel");
-conent.scrollLeft-=1100;
-event.preventDefault();
-})
+const leftButton = document.querySelector(".left-btn");
+leftButton.addEventListener("click", function(event){
+    const content = document.querySelector(".slide-carousel");
+    const itemWidth = content.querySelector(".carousel-item").offsetWidth;  // Get the width of a single item
+    content.scrollLeft -= itemWidth;  // Scroll left by one item width
+    event.preventDefault();
+});
+
+const rightButton = document.querySelector(".right-btn");
+rightButton.addEventListener("click", function(event){
+    const content = document.querySelector(".slide-carousel");
+    const itemWidth = content.querySelector(".carousel-item").offsetWidth;  // Get the width of a single item
+    content.scrollLeft += itemWidth;  // Scroll right by one item width
+    event.preventDefault();
+});
 document.addEventListener('DOMContentLoaded', function() {
     const updateLocationButton = document.querySelector(".update-location");
 
