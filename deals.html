@@ -274,7 +274,17 @@
             <option value="usa">Australia</option>
             <option value="canada">Canada</option>
             
-<script src="app.js"></script>
+<script src="app.js">
+          // Back to Top button functionality
+          const backToTopButton = document.querySelector(".backtotop");
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scroll to top
+  });
+});
+</script>
 </body>
 
 </html>
