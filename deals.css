@@ -8,10 +8,12 @@
   padding:20px;
   background-color: rgb(255, 224, 230);
   padding-left:0px;
+  margin-top:0px;
+  apdding-top:0px;
 }
 
 .carousel {
-    margin-bottom: 20px; /* Adjust the value as needed */
+    margin-bottom:0px; /* Adjust the value as needed */
 }
 .slide-carousel {
     display: flex;
