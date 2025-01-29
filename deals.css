@@ -47,6 +47,13 @@
     color:rgb(33, 98, 161);
     background-color: rgb(247, 242, 242);
 }
+
+.slide-carousel li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor:pointer;
+}
+
 .carousel2 li{
   color:black;
 }
