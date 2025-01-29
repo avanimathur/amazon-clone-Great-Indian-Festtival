@@ -1,3 +1,15 @@
+.carousel-head{
+  color:rgb(15, 17, 17);
+  font-family:"Amazon Ember", Arial, sans-serif;
+  font-size:18px;
+  font-weight:400;
+}
+.carousel2{
+  padding:20px;
+  background-color: rgb(255, 224, 230);
+  padding-left:0px;
+}
+
 .carousel {
     margin-bottom: 20px; /* Adjust the value as needed */
 }
@@ -28,15 +40,19 @@
     text-align: center; /* Optional: Center the image horizontally */
     padding-left:0px;
     padding-right:0px;
-    border:solid black;
-    border-width: 1px;
-    padding-bottom: 10px;
+    border:solid rgb(165, 163, 163);
+    border-width: 0.5px;
+    padding-bottom: 30px;
+    border-radius:7px;
+    color:rgb(33, 98, 161);
+    background-color: rgb(247, 242, 242);
+}
+.carousel2 li{
+  color:black;
 }
 
-    
-
 html a {
-    color: white;
+    color: black;
     text-decoration: none;
     cursor: pointer;
   }
@@ -44,7 +60,7 @@ html a {
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(236, 234, 234);
+    background-color: white;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
   }
@@ -63,6 +79,13 @@ html a {
     /* Optional: Add underline on hover for all */
   }
   
+  .lower-header2 .lower-header-text2:hover {
+    text-decoration: underline;
+    /* Optional: Add underline on hover for all */
+  }
+
+  
+
   #navbar {
     background-color: #131a22;
     height: 70px;
@@ -717,7 +740,7 @@ html a {
   }
   
   .lower-header-text:hover {
-    color:rgb(255, 220, 156); /* Optional: Change text color on hover */
+    color:rgb(255, 166, 0); /* Optional: Change text color on hover */
     transform: translateY(-2px); /* Move text upward slightly */
   }
   
