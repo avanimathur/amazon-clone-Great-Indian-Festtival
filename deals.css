@@ -9,13 +9,12 @@
   background-color: rgb(255, 224, 230);
   padding-left:0px;
   margin-top:0px;
-  apdding-top:0px;
 }
 
 .carousel {
-    margin-bottom:0px; /* Adjust the value as needed */
+    margin-bottom:0%; /* Adjust the value as needed */
 }
-.slide-carousel {
+.slide-carousel{
     display: flex;
     gap: 30px; /* Space between each item */
     list-style: none; /* Remove default list styles */
@@ -27,7 +26,7 @@
 
 .slide-img {
     object-fit: contain; /* Ensures the entire image is visible */
-    transition: transform 0.3s ease; /* Image hover zoom effect */
+    transition: transform 0.6s ease; /* Image hover zoom effect */
     display: block;
     padding:0px;
     padding-bottom: 10px;
@@ -37,11 +36,8 @@
     margin: 0; /* Remove extra margin */
     width: 100%; /* Optional: Ensures image fits within the <li> */
     padding: 0; /* Ensure no padding inside list items */
-    margin: 0; /* Ensure no margin inside list items */
     display: block; /* Make sure the <li> behaves like a block element */
     text-align: center; /* Optional: Center the image horizontally */
-    padding-left:0px;
-    padding-right:0px;
     border:solid rgb(165, 163, 163);
     border-width: 0.5px;
     padding-bottom: 30px;
@@ -92,8 +88,6 @@ html a {
     text-decoration: underline;
     /* Optional: Add underline on hover for all */
   }
-
-  
 
   #navbar {
     background-color: #131a22;
