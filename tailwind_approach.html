@@ -1,0 +1,57 @@
+<!-- representing HTML with Tailwind classes -->
+<html class="text-white">
+  <body class="m-0 p-0 bg-gray-200 font-montserrat overflow-x-hidden">
+    <!-- Navbar -->
+    <div id="navbar" class="bg-gray-900 h-16 w-full flex justify-between items-center">
+      <img src="amazon-logo.png" alt="Amazon Logo" class="w-28 h-9 ml-5 hover:outline hover:outline-white hover:outline-offset-2">
+      <div class="location text-white">
+        <p class="location-name text-sm">Your Location</p>
+        <p class="update-location text-base font-bold">Update Location</p>
+      </div>
+      <div class="search-bar flex items-center">
+        <select class="bg-gray-300 h-10 w-16 rounded-l px-4 hover:bg-gray-400 transition-all border-none">
+          <!-- Options -->
+        </select>
+        <input type="text" class="h-10 w-[45vw] bg-white px-3 hover:bg-gray-200 transition-all border-none">
+        <button class="bg-orange-400 px-4 py-2 rounded-r cursor-pointer hover:brightness-75">
+          <svg class="w-5 h-5"></svg> <!-- Search icon -->
+        </button>
+      </div>
+      <div class="sign-in flex flex-col text-white font-arial cursor-pointer hover:outline hover:outline-white hover:outline-offset-2">
+        <span class="sign-head text-xs">Sign In</span>
+        <span class="sign-bottom text-sm font-bold">Your Account</span>
+      </div>
+    </div>
+
+    <!-- Lower Header -->
+    <div class="lower-header flex items-center justify-between bg-gray-800 text-white h-10 w-full">
+      <span class="lower-header-text ml-4 mr-4 text-sm font-bold hover:outline hover:outline-white hover:outline-offset-2">
+        Electronics
+      </span>
+      <!-- Other Items -->
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-container w-full h-[45vh] overflow-hidden relative">
+      <div class="auto-carousel flex w-full animate-slide">
+        <div class="slide min-w-full h-[45vh]">
+          <img src="image1.jpg" class="w-full h-full object-cover">
+        </div>
+        <!-- Other Slides -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white flex flex-wrap justify-around p-5 text-center">
+      <div class="footer-column m-2 text-justify">
+        <h3 class="text-lg font-bold border-b-2 border-orange-500 inline-block pb-2">About</h3>
+        <a href="#" class="text-white block mb-2 hover:underline hover:text-gray-400">Link 1</a>
+        <!-- More Links -->
+      </div>
+      <div class="footer-bottom text-center p-2 bg-gray-900">
+        <img src="logo.png" class="inline invert">
+        <select class="bg-gray-800 text-white border border-white p-1 ml-2"></select>
+      </div>
+    </footer>
+  </body>
+</html>
