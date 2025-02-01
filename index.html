@@ -47,7 +47,11 @@
                 <option value="">Furniture</option>
             </select>
 
-            <input type="text" placeholder="Search Amazon.in" class="input-search">
+            <div class="search-container">
+                <input type="text" placeholder="Search Amazon.in" class="input-search" id="searchInput">
+                <div class="suggestion-box" id="suggestionBox"></div>
+            </div>
+
 
             <span class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -435,6 +439,60 @@
             <option value="canada">Canada</option>
             
         <script src="app.js"></script>
+
+        <!-- Suggestion box text -->
+        <script>
+            const searchInput = document.getElementById('searchInput');
+            const suggestionBox = document.getElementById('suggestionBox');
+        
+            // Example list of suggestions (in a real app, fetch from an API)
+            const suggestions = [
+              "Laptop",
+              "Mobile",
+              "Headphones",
+              "Charger",
+              "Smart Watch",
+              "Books",
+              "Shoes",
+              "Camera",
+              "Backpack"
+            ];
+        
+            // Event listener for input
+            searchInput.addEventListener('input', () => {
+              const query = searchInput.value.toLowerCase();
+              suggestionBox.innerHTML = ''; // Clear previous suggestions
+              if (query) {
+                const filteredSuggestions = suggestions.filter(item =>
+                  item.toLowerCase().includes(query)
+                );
+                if (filteredSuggestions.length > 0) {
+                  filteredSuggestions.forEach(suggestion => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.textContent = suggestion;
+                    suggestionItem.className = 'suggestion-item';
+                    suggestionItem.addEventListener('click', () => {
+                      searchInput.value = suggestion;
+                      suggestionBox.style.display = 'none'; // Hide suggestions
+                    });
+                    suggestionBox.appendChild(suggestionItem);
+                  });
+                  suggestionBox.style.display = 'block'; // Show suggestions
+                } else {
+                  suggestionBox.style.display = 'none'; // Hide if no match
+                }
+              } else {
+                suggestionBox.style.display = 'none'; // Hide if input is empty
+              }
+            });
+        
+            // Hide suggestion box when clicking outside
+            document.addEventListener('click', (e) => {
+              if (!e.target.closest('.input-search')) {
+                suggestionBox.style.display = 'none';
+              }
+            });
+          </script>
 </body>
 
 </html>

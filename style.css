@@ -699,7 +699,6 @@ body {
   color: #0056b3; /* Optional: Darker color when active */
 }
 
-=======
  /* Chatbot Icon */
  .chatbot-icon {
   position: fixed;
@@ -892,4 +891,27 @@ body {
     right: 30px;
     padding: 18px;
   }
+}
+
+.suggestion-box {
+  position: absolute;
+  top: 4.8vw;
+  left: 24vw;
+  width: 46vw;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none; /* Initially hidden */
+  z-index: 100000;
+}
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+.suggestion-item:hover {
+  background-color: #f0f0f0;
 }
