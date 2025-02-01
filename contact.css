@@ -389,44 +389,188 @@ body {
 
 /* Contact Us Page */
 .contact-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
 
-.contact-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-top: 3px solid #ff9900; /* Added orange accent */
 }
 
-.contact-form label {
-    margin-top: 10px;
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #232f3e;
+  border-left: 4px solid #ff9900; /* Added orange accent */
+  padding-left: 10px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.quick-help {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quick-help-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-help-button:hover {
+  background-color: #fff9e6; /* Lighter orange background */
+  border-color: #ff9900;
+  color: #232f3e;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.5rem;
+  color: #ff9900; /* Made icons orange */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #232f3e;
+}
+
+.form-input, 
+.form-select, 
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus, 
+.form-select:focus, 
+.form-textarea:focus {
+  outline: none;
+  border-color: #ff9900; /* Orange focus state */
+  box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.2); /* Orange focus ring */
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 .submit-button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #ff9900; /* Changed to orange */
+  color: #232f3e; /* Dark text for better contrast */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #f90; /* Slightly darker orange */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.support-option {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.support-option:hover {
+  border-color: #ff9900;
+  background-color: #fff9e6;
+}
+
+.support-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #232f3e;
+}
+
+.support-text {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.support-button {
+  background-color: transparent;
+  border: 2px solid #ff9900; /* Changed to orange */
+  color: #232f3e;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.support-button:hover {
+  background-color: #ff9900;
+  color: white;
+}
+
+.file-hint {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      padding: 1rem;
+  }
+  
+  .form-grid {
+      grid-template-columns: 1fr;
+  }
 }
 
 .carousel {
